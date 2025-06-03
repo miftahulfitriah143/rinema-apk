@@ -20,7 +20,9 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/logo_rinema.png
     - assets/images/petaka.jpeg
     - assets/images/pabrik_gula.jpg
     - assets/images/pembantaian.jpg
     - assets/images/komang.jpg
+    - assets/images/petaka.jpeg

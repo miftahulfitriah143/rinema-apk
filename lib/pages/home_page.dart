@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rinemaa/widgets/navigation_bar.dart';
 import '../models/event.dart';
 import '../widgets/header_section.dart';
 import '../widgets/menu_card.dart';
@@ -13,7 +14,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String selectedGenre = 'Semua';
-  int _selectedIndex = 0;
 
   final List<Event> terbaru = [
     Event(title: "Petaka Gunung Gede", image: "assets/images/petaka.jpeg"),
@@ -28,16 +28,6 @@ class _HomePageState extends State<HomePage> {
     Event(title: "Pembantaian Dukun Santet", image: "assets/images/pembantaian.jpg"),
     Event(title: "Pabrik Gula Uncut", image: "assets/images/pabrik_gula.jpg"),
   ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-
-    // Tambahkan navigasi ke halaman lain jika perlu
-    // Misalnya:
-    // if (index == 1) Navigator.push(context, MaterialPageRoute(builder: (_) => FilmPage()));
-  }
 
   Widget genreButton(String label) {
     final isSelected = label == selectedGenre;
@@ -202,27 +192,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.movie_filter),
-            label: 'Film',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      bottomNavigationBar: const BottomNavBar(currentIndex: 0),
     );
   }
 }

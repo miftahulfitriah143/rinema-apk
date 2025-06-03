@@ -8,7 +8,7 @@ class HeaderSection extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'assets/images/1917.png',
+          'assets/images/logo_rinema.png',
           fit: BoxFit.cover,
         ),
       ],
