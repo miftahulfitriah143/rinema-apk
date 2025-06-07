@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rinemaa/widgets/navigation_bar.dart';
+import 'package:rinemaa/widgets/header_section.dart';  // Import HeaderSection
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -22,27 +23,24 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text(
-          "RINEMA",
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {},
-          )
-        ],
-      ),
-      body: Center(
+      // Hapus AppBar
+      body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomButton(label: "Login", onPressed: () {}),
-            const SizedBox(height: 16),
-            CustomButton(label: "Register", onPressed: () {}),
+            const HeaderSection(), // Pasang HeaderSection sebagai pengganti AppBar
+            const SizedBox(height: 20),
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomButton(label: "Login", onPressed: () {}),
+                    const SizedBox(height: 16),
+                    CustomButton(label: "Register", onPressed: () {}),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

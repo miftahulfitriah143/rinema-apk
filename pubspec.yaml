@@ -7,13 +7,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # tambahkan dependensi lain jika ada
   cupertino_icons: ^1.0.2
+  smooth_page_indicator: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  http: ^1.2.1
 
   flutter_lints: ^3.0.1
 
@@ -23,6 +24,6 @@ flutter:
     - assets/images/logo_rinema.png
     - assets/images/petaka.jpeg
     - assets/images/pabrik_gula.jpg
-    - assets/images/pembantaian.jpg
     - assets/images/komang.jpg
     - assets/images/petaka.jpeg
+    - assets/images/pembantaian.jpg

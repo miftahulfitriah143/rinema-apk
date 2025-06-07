@@ -7,9 +7,15 @@ class HeaderSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'assets/images/logo_rinema.png',
-          fit: BoxFit.cover,
+        Align(
+          alignment: Alignment.topCenter,
+          child: SizedBox(
+            width: 75,
+            child: Image.asset(
+              'assets/images/logo_rinema.png',
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
       ],
     );
