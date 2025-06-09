@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rinemaa/widgets/navigation_bar.dart';
 import 'package:rinemaa/widgets/header_section.dart';  // Import HeaderSection
+import 'package:rinemaa/pages/register_page.dart'; // Import RegisterPage
+import 'package:rinemaa/pages/login_page.dart'; // Import LoginPage
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -34,9 +36,27 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomButton(label: "Login", onPressed: () {}),
+                    CustomButton(
+                      label: "Login",
+                      onPressed: () {
+                        // Navigasi ke halaman LoginPage saat tombol ditekan
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
+                        );
+                      },
+                    ),
                     const SizedBox(height: 16),
-                    CustomButton(label: "Register", onPressed: () {}),
+                    CustomButton(
+                      label: "Register",
+                      onPressed: () {
+                        // Navigasi ke halaman RegisterPage saat tombol ditekan
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const RegisterPage()),
+                        );
+                      },
+                    ),
                   ],
                 ),
               ),

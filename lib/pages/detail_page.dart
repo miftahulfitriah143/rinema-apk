@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rinemaa/widgets/navigation_bar.dart';
 import 'package:rinemaa/widgets/header_section.dart';
-import '../models/event.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../models/event.dart';
 
 class DetailPage extends StatefulWidget {
   final Event event;
